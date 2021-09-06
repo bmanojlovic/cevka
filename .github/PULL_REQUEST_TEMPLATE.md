@@ -9,7 +9,7 @@
 
 ## Are you a GitHub Sponsor (Yes/No?)
 
-Check at: https://github.com/sponsors/bmanojlovic
+Check at: https://github.com/sponsors/inlets
 - [ ] Yes
 - [ ] No
 

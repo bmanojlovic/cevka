@@ -22,19 +22,16 @@ func init() {
 
 // inletsCmd represents the base command when called without any sub commands.
 var inletsCmd = &cobra.Command{
-	Use:   "inlets",
+	Use:   "cevka",
 	Short: "Expose your local endpoints to the Internet.",
 	Long: `
 Expose your local endpoints to the Internet by creating a tunnel between 
 your local machine and an exit-server with its own public IP address.
 
 WARNING: When used over the Internet, you must add TLS to secure the
-inlets control-plane. Upgrade to inlets PRO to gain automatic TLS encryption
-and to tunnel both HTTP and TCP services on multiple ports.
+cevka control-plane. 
 
-See more: https://inlets.dev
-
-inlets is made available for free, so support the tools that you 
+cevka is made available for free, so support the tools that you 
 use through GitHub Sponsors: https://github.com/sponsors/inlets`,
 	Run: runInlets,
 }
@@ -84,9 +81,16 @@ func printLogo() {
 	fmt.Println(inletsLogo)
 }
 
-const inletsFigletStr = ` _       _      _            _
-(_)_ __ | | ___| |_ ___   __| | _____   __
-| | '_ \| |/ _ \ __/ __| / _` + "`" + ` |/ _ \ \ / /
-| | | | | |  __/ |_\__ \| (_| |  __/\ V /
-|_|_| |_|_|\___|\__|___(_)__,_|\___| \_/
+const inletsFigletStr = `       _ _   _           _                            ___                     
+  __ _(_) |_| |__  _   _| |__   ___ ___  _ __ ___    / / |__  _ __ ___   __ _ 
+ / _' | | __| '_ \| | | | '_ \ / __/ _ \| '_ ' _ \  / /| '_ \| '_ ' _ \ / _' |
+| (_| | | |_| | | | |_| | |_) | (_| (_) | | | | | |/ / | |_) | | | | | | (_| |
+ \__, |_|\__|_| |_|\__,_|_.__(_)___\___/|_| |_| |_/_/  |_.__/|_| |_| |_|\__,_|
+ |___/                                                                        
+             _ _            _         __             _         
+ _ __   ___ (_) | _____   _(_) ___   / /__ _____   _| | ____ _ 
+| '_ \ / _ \| | |/ _ \ \ / / |/ __| / / __/ _ \ \ / / |/ / _' |
+| | | | (_) | | | (_) \ V /| | (__ / / (_|  __/\ V /|   < (_| |
+|_| |_|\___// |_|\___/ \_/ |_|\___/_/ \___\___| \_/ |_|\_\__,_|
+          |__/                                                 
 `
