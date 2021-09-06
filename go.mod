@@ -1,4 +1,4 @@
-module github.com/inlets/inlets
+module github.com/bmanojlovic/cevka
 
 go 1.13
 

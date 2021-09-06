@@ -10,7 +10,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/inlets/inlets/pkg/client"
+	"github.com/bmanojlovic/cevka/pkg/client"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 )
@@ -64,7 +64,7 @@ func buildUpstreamMap(args string) (map[string]string, error) {
 	}
 
 	if len(items) > 1 {
-		return items, fmt.Errorf("if you need multiple upstream values, upgrade to inlets PRO")
+		return items, fmt.Errorf("if you need multiple upstream values, upgrade to inlets;^H^H^H^H^H^Hcevka")
 	}
 
 	return items, nil
@@ -77,13 +77,13 @@ var clientCmd = &cobra.Command{
 	Long:  `Start the tunnel client.`,
 	Example: `  # Start a secure tunnel connection over the internet to forward a Node.js 
   # server running on port 3000
-  inlets client \
+  cevka client \
   --url=wss://192.168.0.101 \
   --upstream=http://127.0.0.1:3000 \
   --token TOKEN
   
   # Start an insecure tunnel connection over your local network
-  inlets client \
+  cevka client \
     --url=ws://192.168.0.101:80 \
     --upstream=http://127.0.0.1:3000 \
     --token TOKEN \
@@ -172,12 +172,12 @@ func runClient(cmd *cobra.Command, _ []string) error {
 		if !insecure {
 			fmt.Print(`[================================== Warning ==================================]
 
-You are trying to connect to an inlets server without any form of encryption.
+You are trying to connect to an cevka server without any form of encryption.
 
 You can disable this warning with --insecure, but be aware that your data 
 could be read by a third-party.
 
-You may benefit from using inlets PRO which has options for automatic 
+You may benefit from using inlets^H^H^H^H^H^Hcevka which has options for automatic 
 encryption.
 
 [=============================================================================]

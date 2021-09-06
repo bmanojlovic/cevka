@@ -1,50 +1,26 @@
-## inlets is a Cloud Native Tunnel written in Go
+## Intro
 
-<img src="docs/inlets-logo-sm.png" width="150px">
+inlets&reg;^H^H^H^H^H^H^Hcevka is how you connect services between different networks. You won't have to think about managing firewalls, NAT or VPNs again. Services can be tunnelled securely over a websocket and accessed on a remote network privately, or exposed on the Internet using an exit-server (5-10USD / mo).
 
-The open source version of inlets was a Cloud Native Tunnel written in Go. It was only ever designed to be a prototype and lessons were learned along the way resulting in a new version that is better suited for production use.
+Why do we need this project? Similar tools such as [inlets](https://inlets.dev/), [ngrok](https://ngrok.com/) and [Argo Tunnel](https://developers.cloudflare.com/argo-tunnel/) from [Cloudflare](https://www.cloudflare.com/) are closed-source, have limits built-in, can work out expensive, and have limited support for arm/arm64, Docker and Kubernetes. Ngrok's domain is also often banned by corporate firewall policies meaning it can be unusable. Other open-source tunnel tools are designed to only set up a single static tunnel.
 
-![Conceptual diagram](docs/inlets-tls.png)
+With inlets^H^H^H^H^H^Hcevka you can set up your own self-hosted tunnel, copy over the static binary and start tunnelling traffic without any arbitrary limits or restrictions. When used with TLS, inlets^H^H^H^H^H^Hcevka can be used with most corporate HTTP proxies.
 
-inlets OSS has now been replaced by inlets PRO, a new version that does everything the original version did, but with secure defaults, and a better ecosystem.
+![Conceptual diagram](docs/inlets.png)
 
-inlets PRO ships binaries with support for Windows, MacOS and Linux. There is also an official public Docker image available. The code will run on Intel, AMD and ARM architectures.
+_Conceptual diagram for inlets^H^H^H^H^H^Hcevka_
 
-inlets OSS remains available in a source-only format on GitHub and will not receive updates. Personal licenses for inlets PRO are available at a discounted rate for hobbyist users for 6 or 12 months.
+## About inlets^H^H^H^H^H^Hcevka OSS
 
-### Going to production with inlets PRO
+inlets^H^H^H^H^H^Hcevka OSS uses a websocket to create a tunnel between a client and a server. The server is typically a machine with a public IP address, and the client is on a private network with no public address.
 
-The following features / use-cases are covered by [inlets PRO](https://inlets.dev):
+### Features
 
-* Tunnel HTTPS / REST traffic, with automated Let's Encrypt support
-* Tunnel L4 TCP traffic such as websockets, databases, reverse proxies, remote desktop, VNC and SSH
-* Multiplex multiple HTTP sites over the same connection
-* Connect multiple clients to the same server
-* Automate server creation on the most popular developer clouds and hyperscalers
-* Expose multiple ports from the same client - i.e. 80 and 443
+- Tunnel HTTP or websockets
+- Expose a site on through the use of a DNS entry and a `Host` header
+- Shared authentication token for the client and server
+- Automatic reconnects for when the connection drops
 
-There's also a broader ecosystem:
+Distribution:
 
-* Kubernetes helm charts, YAML and [Operator](https://github.com/inlets/inlets-operator)
-* [Documentation](https://docs.inlets.dev/), [blog posts, tutorials and videos](https://inlets.dev/blog)
-* Commercial services & support
-
-Try it out for free: [inlets.dev](https://inlets.dev)
-
-### How does it work?
-
-In "A tale of two networks" Alex Ellis and Johan Siebens explore blog posts, use-cases and show demos of inlets PRO.
-
-[A tale of two networks - demos and use-cases for inlets tunnels](https://www.youtube.com/watch?v=AFMA1xA4zts&feature=youtu.be)
-
-[![https://img.youtube.com/vi/AFMA1xA4zts/hqdefault.jpg](https://img.youtube.com/vi/AFMA1xA4zts/maxresdefault.jpg)](https://youtu.be/AFMA1xA4zts)
-
-### The inlets projects
-
-inlets is a Cloud Native Tunnel and is [listed on the Cloud Native Landscape](https://landscape.cncf.io/category=service-proxy&format=card-mode&grouping=category&sort=stars) under *Service Proxies*.
-
-* [inlets PRO](https://inlets.dev) - Secure HTTP(s) and TCP tunnels with automated TLS encryption. Replaces inlets OSS
-* [inlets-operator](https://github.com/inlets/inlets-operator) - Public IPs for your private Kubernetes Services and CRD using inlets PRO
-* [inletsctl](https://github.com/inlets/inletsctl) - The fastest way to create self-hosted exit-servers using inlets PRO
-* [inlets](https://github.com/inlets/inlets) - Cloud Native Tunnel for HTTP only - **no** tutorials, automation, TLS, TCP or Kubernetes integration available. Replaced by inlets PRO
-
+- Source code only (for now)

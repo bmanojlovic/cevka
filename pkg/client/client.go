@@ -11,12 +11,12 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/inlets/inlets/pkg/transport"
+	"github.com/bmanojlovic/cevka/pkg/transport"
 	"github.com/rancher/remotedialer"
 	"github.com/twinj/uuid"
 )
 
-// Client for inlets
+// Client for inlets^H^H^H^H^H^Hcevka
 type Client struct {
 	// Remote site for websocket address
 	Remote string

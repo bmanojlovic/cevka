@@ -10,7 +10,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/inlets/inlets/pkg/server"
+	"github.com/bmanojlovic/cevka/pkg/server"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 )
@@ -24,11 +24,11 @@ var serverCmd = &cobra.Command{
 Note: You can pass the --token argument followed by a token value to both the server and client to prevent unauthorized connections to the tunnel.`,
 	RunE: runServer,
 	Example: `  # Bind the data and control plane to 80 and 8080
-  inlets server --port 80 \
+  cevka server --port 80 \
     --control-port 8080
   
   # Bind the control-plane to 127.0.0.1:
-  inlets server --port 80 \
+  cevka server --port 80 \
     --control-port 8001 \
     --control-addr 127.0.0.1`,
 	SilenceUsage:  true,

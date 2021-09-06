@@ -10,20 +10,20 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/inlets/inlets/pkg/router"
-	"github.com/inlets/inlets/pkg/transport"
+	"github.com/bmanojlovic/cevka/pkg/router"
+	"github.com/bmanojlovic/cevka/pkg/transport"
 	"github.com/rancher/remotedialer"
 	"github.com/twinj/uuid"
 	"k8s.io/apimachinery/pkg/util/proxy"
 )
 
-// Server for the exit-server of inlets
+// Server for the exit-server of inlets^H^H^H^H^H^Hcevka
 type Server struct {
 
 	// Port serves data to clients
 	Port int
 
-	// ControlPort represents the tunnel to the inlets client
+	// ControlPort represents the tunnel to the inlets^H^H^H^H^H^Hcevka client
 	ControlPort int
 
 	DataAddr    string

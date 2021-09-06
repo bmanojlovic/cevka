@@ -9,7 +9,7 @@
 
 ## Are you a GitHub Sponsor (Yes/No?)
 
-Check at: https://github.com/sponsors/inlets
+Check at: https://github.com/sponsors/bmanojlovic
 - [ ] Yes
 - [ ] No
 
@@ -22,6 +22,6 @@ Check at: https://github.com/sponsors/inlets
 I have:
 
 - [ ] updated the documentation and/or roadmap (if required)
-- [ ] read the [CONTRIBUTION](https://github.com/inlets/inlets/blob/master/CONTRIBUTING.md) guide
+- [ ] read the [CONTRIBUTION](https://github.com/bmanojlovic/cevka/blob/master/CONTRIBUTING.md) guide
 - [ ] signed-off my commits with `git commit -s`
 - [ ] added unit tests

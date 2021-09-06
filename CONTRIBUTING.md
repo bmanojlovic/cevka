@@ -92,8 +92,8 @@ For development you will need [Golang 1.13 or newer](https://golang.org/dl/)
 You can get the code like this:
 
 ```bash
-go get -u github.com/inlets/inlets
-cd $GOPATH/src/github.com/inlets/inlets
+go get -u github.com/bmanojlovic/cevka
+cd $GOPATH/src/github.com/bmanojlovic/cevka
 ```
 
 Contributions are welcome. All commits must be signed-off with `git commit -s` to accept the [Developer Certificate of Origin](https://developercertificate.org).
